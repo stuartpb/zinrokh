@@ -12,7 +12,7 @@ local lfs = require "lfs"
 --The directory to look for runsets in.
 local runsets_dir = "runsets"
 --The runset to load at startup.
-local default_runset = "sample"
+local default_runset = "hgweb"
 
 --Constants------------------------------------------------------------------
 local icon_filename = "trade_archaeology_zinrokh-sword.jpg"
@@ -123,7 +123,7 @@ end
 local function load_buttons()
   local success, message = load_runs()
   if success then make_buttons()
-  else statuslabel.title = message
+  else report.summary(message)
   end
 end
 
