@@ -19,12 +19,10 @@ return {
       if curconds then
         local cond = setmetatable({},
           {__index=function() return "???" end})
-        local function get_data(field)
-          cond[field] = string.match(curconds,
-            string.format('<%s data="(.-)"/>',field))
+        for field, data in string.gmatch(
+          curconds,'<(.-) data="(.-)"/>') do
+          cond[field] = data
         end
-        get_data"condition"
-        get_data"temp_f"
 
         report.summary(string.gsub(
           --176 = 0xB0 = ° in CP1252
