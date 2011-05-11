@@ -198,7 +198,7 @@ dlg = iup.dialog{
       iup.item{title="Quit";
         action = iup.ExitLoop}
     }},
-    {"Deploysets",runset_menu},
+    {"Runsets",runset_menu},
     {"Options",iup.menu{
       topmost_mitem
     }},
