@@ -12,7 +12,7 @@ local lfs = require "lfs"
 --The directory to look for runsets in.
 local runsets_dir = "runsets"
 --The runset to load at startup.
-local default_runset = "hgweb"
+local default_runset = "sample"
 
 --Constants------------------------------------------------------------------
 local icon_filename = "trade_archaeology_zinrokh-sword.jpg"
