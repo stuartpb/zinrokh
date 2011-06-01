@@ -122,8 +122,12 @@ end
 
 local function load_buttons()
   local success, message = load_runs()
-  if success then make_buttons()
-  else report.summary(message)
+  if success then
+    report.summary(string.format(
+      'Runset "%s" loaded successfully',
+      runset))
+    make_buttons()
+  else report.error(message)
   end
 end
 
